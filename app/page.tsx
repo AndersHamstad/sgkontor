@@ -68,7 +68,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="relative h-[80vh] w-full pt-24">
+      <section className="relative min-h-[560px] md:h-[80vh] w-full pt-24">
         <img
           src="/images/bygg.jpg"
           alt="Sverresgate kontorfellesskap"
@@ -167,27 +167,27 @@ export default function Home() {
             Hva du kan forvente
           </h2>
 
-          <div className="grid gap-4 md:grid-cols-3">
-            {[
-              { src: "/images/kontor.jpg", alt: "Kontorplass" },
-              { src: "/images/moterom.jpg", alt: "Møterom" },
-              { src: "/images/fellesareal.jpg", alt: "Fellesareal" },
-              { src: "/images/kjokken.jpg", alt: "Kjøkken" },
-              { src: "/images/hero.jpg", alt: "Arbeidsområde" },
-              { src: "/images/bygg.jpg", alt: "Bygg" },
-            ].map((image) => (
-              <div
-                key={image.src}
-                className="h-72 overflow-hidden rounded-2xl bg-stone-200"
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="h-full w-full object-cover transition duration-500 hover:scale-105"
-                />
-              </div>
-            ))}
-          </div>
+          <div className="flex gap-4 overflow-x-auto scroll-smooth pb-4 md:grid md:grid-cols-3 md:overflow-visible md:pb-0">
+  {[
+    { src: "/images/kontor.jpg", alt: "Kontorplass" },
+    { src: "/images/moterom.jpg", alt: "Møterom" },
+    { src: "/images/fellesareal.jpg", alt: "Fellesareal" },
+    { src: "/images/kjokken.jpg", alt: "Kjøkken" },
+    { src: "/images/hero.jpg", alt: "Arbeidsområde" },
+    { src: "/images/bygg.jpg", alt: "Bygg" },
+  ].map((image) => (
+    <div
+      key={image.src}
+      className="h-72 min-w-[85%] overflow-hidden rounded-2xl bg-stone-200 md:min-w-0"
+    >
+      <img
+        src={image.src}
+        alt={image.alt}
+        className="h-full w-full object-cover transition duration-500 hover:scale-105"
+      />
+    </div>
+  ))}
+</div>
         </div>
       </section>
 
