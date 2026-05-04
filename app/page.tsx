@@ -172,9 +172,9 @@ export default function Home() {
     { src: "/images/kontor.jpg", alt: "Kontorplass" },
     { src: "/images/moterom.jpg", alt: "Møterom" },
     { src: "/images/fellesareal.jpg", alt: "Fellesareal" },
-    { src: "/images/kjokken.jpg", alt: "Kjøkken" },
-    { src: "/images/hero.jpg", alt: "Arbeidsområde" },
-    { src: "/images/bygg.jpg", alt: "Bygg" },
+    { src: "/images/oppgang.jpg", alt: "Oppgang" },
+    { src: "/images/bordtennis.jpg", alt: "Bordtennis" },
+    { src: "/images/inngang.jpg", alt: "Inngang" },
   ].map((image) => (
     <div
       key={image.src}
